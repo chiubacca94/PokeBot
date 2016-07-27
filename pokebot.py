@@ -2,6 +2,7 @@
 # Pokebot will randomly have pokemon appear in chats.
 #   Only 151 are here
 # ** MUST HAVE pyTelegramBotAPI : [pip install pyTelegramBotAPI] or upgrade [pip install pytelegrambotapi --upgrade]
+# ** MUST HAVE tinydb : [pip install tinydb]
 # How to run: python3 pokebot.py 
 # =====================================================================================================================================================
 
