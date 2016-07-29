@@ -164,7 +164,6 @@
       "probability": 15,
       "rarity": 1
    },
-   "11":{},
    "12": {
       "name": "Butterfree",
       "attack": 45,
@@ -197,8 +196,6 @@
       "probability": 15,
       "rarity": 1
    },
-   "14": {},
-   "15": {},
    "16": {
       "name": "Pidgey",
       "attack": 45,
@@ -339,7 +336,6 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "25": {},
    "26": {
       "name": "Raichu",
       "attack": 90,
@@ -403,7 +399,6 @@
       "probability": 15,
       "rarity": 1
    },
-   "30":{},
    "31": {
       "name": "Nidoqueen",
       "attack": 82,
@@ -436,7 +431,6 @@
       "probability": 15,
       "rarity": 1
    },
-   "33":{},
    "34": {
       "name": "Nidoking",
       "attack": 92,
@@ -450,9 +444,6 @@
       "curve": 1.3,
       "rarity": 5
    },
-   "35":{},
-   "36":{},
-   "37":{},
    "38": {
       "name": "Ninetales",
       "attack": 76,
@@ -464,8 +455,6 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "39":{},
-   "40":{},
    "41": {
       "name": "Zubat",
       "attack": 45,
@@ -500,9 +489,6 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "43":{},
-   "44":{},
-   "45":{},
    "46": {
       "name": "Paras",
       "attack": 70,
@@ -695,7 +681,6 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "58":{},
    "59": {
       "name": "Arcanine",
       "attack": 110,
@@ -727,7 +712,6 @@
       "probability": 6,
       "rarity": 1
    },
-   "61":{},
    "62": {
       "name": "Poliwrath",
       "attack": 85,
@@ -739,8 +723,6 @@
       "curve": 1.3,
       "rarity": 5
    },
-   "63":{},
-   "64":{},
    "65": {
       "name": "Alakazam",
       "attack": 50,
@@ -773,7 +755,6 @@
       "probability": 12,
       "rarity": 1
    },
-   "67":{},
    "68": {
       "name": "Machamp",
       "attack": 130,
@@ -806,7 +787,6 @@
       "probability": 15,
       "rarity": 1
    },
-   "70":{},
    "71": {
       "name": "Victreebel",
       "attack": 105,
@@ -873,7 +853,6 @@
       "probability": 15,
       "rarity": 1
    },
-   "75":{},
    "76": {
       "name": "Golem",
       "attack": 110,
@@ -1101,7 +1080,6 @@
       "curve": 1.6,
       "rarity": 4
    },
-   "90":{},
    "91": {
       "name": "Cloyster",
       "attack": 95,
@@ -1132,7 +1110,6 @@
       "probability": 10,
       "rarity": 1
    },
-   "93":{},
    "94": {
       "name": "Gengar",
       "attack": 65,
@@ -1267,7 +1244,6 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "102":{},
    "103": {
       "name": "Exeggutor",
       "attack": 95,
@@ -1548,7 +1524,6 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "120":{},
    "121": {
       "name": "Starmie",
       "attack": 75,
@@ -1737,7 +1712,6 @@
       "probability": 4,
       "rarity": 5
    },
-   "132":{},
    "133": {
       "name": "Eevee",
       "attack": 55,
@@ -1754,7 +1728,6 @@
       ],
       "probability": 8
    },
-   "134":{},
    "135": {
       "name": "Jolteon",
       "levels": [
