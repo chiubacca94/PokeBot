@@ -1,11 +1,7 @@
 # Import libraries
 from tinydb import TinyDB, Query
-from random import randint
 from numpy.random import choice
 import numpy as np
-import os
-import time
-import sys
 import json
 
 
