@@ -49,14 +49,17 @@ class TinyDbInterface:
 
     # Get the rarity weights
     def SetWeights(self):
-        arr = []
+        rarr = []
         prob = []
 
         data = json.loads(open('PokemonData.json').read())
 
-        for i in data:
-            if data[i] != "{}":
-                data[i]['rarity']
+        for i in range(153):
+            if data['1']['rarity'] == 0:
+                rarr[i] = 0;
+            else:
+                rarr[i] = data[i]['rarity']
+                
 
         prob = ConvertToProb(arr)
 
@@ -69,7 +72,7 @@ class TinyDbInterface:
     # Initialize a constructor
     def __init__(self):
         self.poke_arr = array('i',(i for i in range(0,153))) # INIT array with index
-        self.weights = SetWeights()
+        self.weights = self.SetWeights()
 
 
     # Add user (each user is an array of 150)
