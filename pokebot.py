@@ -25,8 +25,9 @@ bot = telebot.TeleBot(TOKEN)
 f = 0.15
 
 # Message handler for when a user will /join the pokemon ...quest? .......
-@bot.message_handler(commands=['help'])
-def send_welcome(message):
+@bot.message_handler(commands=['join'])
+def join_action(message):
+    tinydb_interface.AddUser()
     bot.reply_to(message, "Catch the pokemon when they appear!")
 
 # Message handler for /start and /help
@@ -36,7 +37,11 @@ def send_welcome(message):
 
 # Message handler for when a user will /catch a pokemon
 @bot.message_handler(commands=['catch'])
-def send_welcome(message):
+def send_catch_action(message):
+    tinydb_interface.AddPokemon()
+
+    # If empty or not registered
+    
     bot.reply_to(message, "Catch the pokemon when they appear!")
 
 # Bot waits for events
