@@ -69,13 +69,13 @@ class TinyDbInterface:
 
     # Initialize a constructor
     def __init__(self):
-        self.poke_arr = array.array('i',(1 for i in range(0,10)))
+        self.poke_arr = array.array('i',(1 for i in range(0,153))) # INIT array with index
         self.weights = SetWeights()
 
 
     # Add user (each user is an array of 150)
     def AddUser(username):
-        my_pokemon = [0] * 152 # Matching arr index to pokemon index (0 is disregarded)
+        my_pokemon = [0] * 153 # Matching arr index to pokemon index (0 is disregarded)
 
         db = TinyDB('users.json')
         db.insert({'username': username, 'pokemon': my_pokemon})
@@ -122,10 +122,24 @@ class TinyDbInterface:
 
         pass # RETURN: check bool
 
-    # Check pokemon quantity for one user
-    def GetUserPokemon(username):
 
-        pass # RETURN: list of pokemon and quantity List: [1] = 2 (You have 2 bulbasaurs)
+    # Check pokemon quantity for one user TEST L8R
+    def GetUserPokemon(username):
+        data = json.loads(open('PokemonData.json').read())
+        json = {}
+
+        user = db.search(User.username == username)
+        poke_list = user[0]['pokemon']
+        
+        for i in 152:
+            if poke_list[i] != 0:
+                poke_name = data[i]['name']
+                count = poke_list[i]
+                json.append( dict( poke_name = count ) )
+
+        # RETURN: list of pokemon and quantity List: [1] = 2 (You have 2 bulbasaurs)
+        return json
+
 
     # Pick pokemon by "weighted random"
     def SpawnPokemon():

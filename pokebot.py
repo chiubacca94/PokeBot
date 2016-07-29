@@ -10,6 +10,7 @@
 import telebot
 import configparser
 from tinydb_interface import TinyDbInterface
+import random
 
 # Parse config file to get the API key
 config = configparser.ConfigParser()
@@ -20,8 +21,21 @@ TOKEN = config['telegram_bot_API']['API_TOKEN']
 # Declare bot
 bot = telebot.TeleBot(TOKEN)
 
+# Frequency of a pokemon appearing
+f = 0.15
+
+# Message handler for when a user will /join the pokemon ...quest? .......
+@bot.message_handler(commands=['help'])
+def send_welcome(message):
+    bot.reply_to(message, "Catch the pokemon when they appear!")
+
 # Message handler for /start and /help
 @bot.message_handler(commands=['help'])
+def send_welcome(message):
+    bot.reply_to(message, "Catch the pokemon when they appear!")
+
+# Message handler for when a user will /catch a pokemon
+@bot.message_handler(commands=['catch'])
 def send_welcome(message):
     bot.reply_to(message, "Catch the pokemon when they appear!")
 
