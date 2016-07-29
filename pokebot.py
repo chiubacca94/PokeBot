@@ -27,8 +27,9 @@ f = 0.15
 # Message handler for when a user will /join the pokemon ...quest? .......
 @bot.message_handler(commands=['join'])
 def join_action(message):
-    tinydb_interface.AddUser()
-    bot.reply_to(message, "Catch the pokemon when they appear!")
+    db = TinyDbInterface()
+    db.AddUser(message.from_user.username)
+    bot.reply_to(message, "Welcome to the World of Pokemon" + message.from_user.username)
 
 # Message handler for /start and /help
 @bot.message_handler(commands=['help'])
@@ -38,7 +39,7 @@ def send_welcome(message):
 # Message handler for when a user will /catch a pokemon
 @bot.message_handler(commands=['catch'])
 def send_catch_action(message):
-    tinydb_interface.AddPokemon()
+    # tinydb_interface.AddPokemon()
 
     # If empty or not registered
     
