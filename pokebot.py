@@ -9,7 +9,7 @@
 # Import libs
 import telebot
 import configparser
-from random import randint
+from tinydb_interface import TinyDbInterface
 
 # Parse config file to get the API key
 config = configparser.ConfigParser()
