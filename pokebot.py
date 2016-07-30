@@ -2,8 +2,9 @@
 # Pokebot will randomly have pokemon appear in chats.
 #   Only 151 are here
 # ** MUST HAVE pyTelegramBotAPI : [pip install pyTelegramBotAPI] or upgrade [pip install pytelegrambotapi --upgrade]
-# ** MUST HAVE tinydb : [pip install tinydb] and numpy
+# ** MUST HAVE tinydb : [pip install tinydb] and numpy : [pip install numpy]
 # How to run: python3 pokebot.py 
+# recommend: using a virtual environment
 # =====================================================================================================================================================
 
 # Import libs
@@ -32,12 +33,11 @@ curPokemonNum = ''
 active = False
 
 # Frequency of a pokemon appearing
-f = 0.80
+f = 0.05
 
 # Message handler for /start and /help
 @bot.message_handler(commands=['help'])
 def send_welcome(message):
-
     bot.reply_to(message, "Catch the pokemon when they appear!")
 
 
@@ -46,13 +46,21 @@ def send_welcome(message):
 def join_action(message):
     db = TinyDbInterface()
     
-    # cannot join 2x!!!
-    if(db.CheckUserExists(message.from_user.username) == 0):
-        bot.reply_to(message, "You already joined!")
+    if(type(message.from_user.username) is not str):
+        username = str(message.from_user.username)
+        chatid = message.chat.id
     else:
-        db.AddUser(message.from_user.username)
-        print(message.from_user.username)
-        bot.reply_to(message, "Welcome to the World of Pokemon " + message.from_user.username)
+        username = message.from_user.username
+        chatid = message.chat.id
+
+    # cannot join 2x!!!
+    if(db.CheckUserExists(username, chatid) == 0):
+        bot.reply_to(message, "You already joined!")
+
+    else:
+        db.AddUser(username, chatid)
+        print(username)
+        bot.reply_to(message, "Welcome to the World of Pokemon " + username)
 
 
 # Message handler for when a user will /catch a pokemon
@@ -68,11 +76,21 @@ def send_catch_action(message):
         print("No pokemon to catch :(")
         bot.reply_to(message, "Nothing is there :(")
     else:
-        if(db.CheckUserExists(message.from_user.username) == 0):
+
+        username = message.from_user.username
+        chatid = message.chat.id
+
+        if(type(message.from_user.username) is not str):
+            username = str(message.from_user.username)
+            chatid = str(message.chat.id)
+            # You need a username now
+
+        if(db.CheckUserExists(username, chatid) == 0):
             if(active==True):
-                db.AddPokemon(message.from_user.username, int(curPokemonNum))
+                db.AddPokemon(username, chatid, int(curPokemonNum))
                 active = False
-                bot.reply_to(message, message.from_user.username + " caught a " + curPokemon)
+
+                bot.reply_to(message, username + " caught a " + curPokemon)
             else: 
                 bot.reply_to(message, "Nothing is there.") 
         else:
@@ -86,9 +104,16 @@ def send_catch_action(message):
 def send_pokedex_action(message):
     pokedex = ''
     db = TinyDbInterface()
-    
-    if(db.CheckUserExists(message.from_user.username) == 0):
-        pokedex = db.GetUserPokemon(message.from_user.username)
+
+    username = message.from_user.username
+    chatid = message.chat.id
+
+    if(type(message.from_user.username) is not str):
+        username = str(message.from_user.username)
+        chatid = str(message.chat.id)
+
+    if(db.CheckUserExists(username, chatid) == 0):
+        pokedex = db.GetUserPokemon(username, chatid)
         if(pokedex != ""):
             bot.reply_to(message, pokedex)
         else:
@@ -97,6 +122,33 @@ def send_pokedex_action(message):
         bot.reply_to(message, "Who are you?")
 
     pass
+
+
+# Message handler for when a user will /join the pokemon ...quest? .......
+@bot.message_handler(commands=['spawn'])
+def force_appear(message):
+    db = TinyDbInterface()
+    global curPokemon
+    global curPokemonNum
+    global active
+    
+    while True:
+        pokemon = db.SpawnPokemon()
+        int(pokemon)
+        curPokemonNum = pokemon
+        pokemon = str(pokemon)
+        pokemon_name = db.Index2Name(pokemon)
+        curPokemon = pokemon_name
+        active = True
+
+        if curPokemon != 'none':
+                break
+
+    print(curPokemon)
+    print(curPokemonNum)
+    # bot.reply_to(message, curPokemon + " has appeared!")
+    bot.send_message(message.chat.id, curPokemon + " has appeared!")
+
 
 
 # Message handler for random pokemon spawning
