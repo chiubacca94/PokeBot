@@ -100,47 +100,47 @@ class TinyDbInterface:
 
 
     # Add user (each user is an array of 150)
-    def AddUser(self, username):
+    def AddUser(self, username, chatid):
         my_pokemon = [0] * 153 # Matching arr index to pokemon index (0 is disregarded)
 
         db = TinyDB('users.json')
-        db.insert({'username': username, 'pokemon': my_pokemon})
+        db.insert({'username': username, 'chatid': chatid, 'pokemon': my_pokemon})
         
         pass # RETURN: check bool
 
 
     # Add pokemon to user (pokemon and quantity)
-    def AddPokemon(self, username, pokemon):
+    def AddPokemon(self, username, chatid, pokemon):
         
         db = TinyDB('users.json')
         Username = Query()
-        user = db.search(Username.username == username)
+        user = db.search((Username.username == username) &  (Username.chatid == chatid))
         # print(pokemon)
         my_pokemon_cur = user[0]['pokemon'][pokemon]
         # print(my_pokemon_cur)
         my_pokemon_new = self.IncrementPokeArr(user[0]['pokemon'], pokemon)
         # print (my_pokemon_new)
-        db.update({'pokemon': my_pokemon_new}, Username.username == username)
+        db.update({'pokemon': my_pokemon_new}, ((Username.username == username ) & (Username.chatid == chatid)))
 
         pass # RETURN: check bool
 
     # Remove pokemon from user
-    def RemovePokemon(self, username, pokemon):
+    def RemovePokemon(self, username, chatid, pokemon):
         db = TinyDB('users.json')
         Username = Query()
-        user = db.search(Username.username == username)
+        user = db.search((Username.username == username) &  (Username.chatid == chatid))
         # print(pokemon)
         my_pokemon_cur = user[0]['pokemon'][pokemon]
         # print(my_pokemon_cur)
         my_pokemon_new = self.DecrementPokeArr(user[0]['pokemon'], pokemon)
         # print (my_pokemon_new)
-        db.update({'pokemon': my_pokemon_new}, Username.username == username)
+        db.update({'pokemon': my_pokemon_new}, ((Username.username == username ) & (Username.chatid == chatid)))
 
         pass # RETURN: check bool
 
 
     # Trade pokemon
-    def TradePokemon(self, user1, user2, pokemon1, pokemon2):
+    def TradePokemon(self, chatid, user1, user2, pokemon1, pokemon2):
         # Add [p1]
         AddPokemon(user1, pokemon1)
 
@@ -157,13 +157,13 @@ class TinyDbInterface:
 
 
     # Check pokemon quantity for one user TEST L8R
-    def GetUserPokemon(self, username):
+    def GetUserPokemon(self, username, chatid):
         db = TinyDB('users.json')
         # data = json.load(open('PokemonData.json'), object_pairs_hook=OrderedDict)
         pokedex = ""
         caught = 0      # How many unique pokemon has the user obtained
-        User = Query()
-        user = db.search(User.username == username)
+        Username = Query()
+        user = db.search((Username.username == username) &  (Username.chatid == chatid))
         print(user)
         poke_list = user[0]['pokemon']
         print(poke_list)
@@ -203,10 +203,10 @@ class TinyDbInterface:
 
 
 
-    def CheckUserExists(self, username):
+    def CheckUserExists(self, username, chatid):
         db = TinyDB('users.json')
-        User = Query()
-        user = db.search(User.username == username)
+        Username = Query()
+        user = db.search((Username.username == username) &  (Username.chatid == chatid))
      
         if user == []:
             return 1
