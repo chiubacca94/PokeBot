@@ -4,6 +4,7 @@ from numpy.random import choice
 import numpy as np
 import json
 from array import array
+from collections import OrderedDict
 
 
 class TinyDbInterface:
@@ -11,23 +12,41 @@ class TinyDbInterface:
     poke_arr = []       # Used for choosing
     weights = []        # Used for assigning weights to respective poke_arr
 
-    # Increment the pokemon count in an array
-    def IncrementPokeArr(arr, pokemon):
-        arr[pokemon] = arr[pokemon] + 1
+    # Pokemon Name to index (need? also change this eventually)
+    def Name2Index(self, PokemonNameKey):
+       return int(PokemonKeyName.split(".")[1])
 
+    # Pokemon Index to Name
+    def Index2Name(self, PokemonInd):
+        data = json.load(open('PokemonData.json'), object_pairs_hook=OrderedDict)
+
+        for key,value in data.items():
+            if PokemonInd in key:
+                return value['name']
+                #return value['name'] + "." + key
+
+    # Increment the pokemon count in an array
+    def IncrementPokeArr(self, arr, pokemonIndex):
+        pokemonIndex = int(pokemonIndex)
+        # print(arr)
+        arr[pokemonIndex] = arr[pokemonIndex] + 1
         return arr
 
     # Decrement the pokemon count in an array
-    def DecrementPokeArr(arr, pokemon):
-        arr[pokemon] = arr[pokemon] - 1
-
+    def DecrementPokeArr(self, arr, pokemonCt, index):
+        pokemonIndex = int(pokemonIndex)
+        # print(arr)
+        arr[pokemonIndex] = arr[pokemonIndex] - 1
         return arr
+
         
     # Convert the 'rarity' number to a probability value (0<i<1) so we can use scientific library 
     #   to pick a weighted random number/pokemon
     def ConvertToProb(self, arr):
         converted = []
         for i in arr:
+            if arr[i] == 0:
+                converted.append(0)
             if arr[i] == 1:
                 converted.append(0.40)
             if arr[i] == 2:
@@ -52,7 +71,9 @@ class TinyDbInterface:
         rarr = []
         prob = []
  
-        data = json.loads(open('PokemonData.json').read())
+        #data = json.loads(open('PokemonData.json').read())
+        data = json.load(open('PokemonData.json'), object_pairs_hook=OrderedDict)
+        # str_data = json.dumps(data, indent=4)
 
         for key, value in data.items():
             if 'rarity' in value:
@@ -63,13 +84,16 @@ class TinyDbInterface:
 
         return prob
 
-        # output_file = open(fileName).read()
-        # output_json = json.loads(output_file)
+    # Set pokemon arr to index integers
+    def SetPokemon(self):
+        arr = []
+        arr = array('i',(i for i in range(0,153))) # INIT array with index
 
+        return arr
 
     # Initialize a constructor
     def __init__(self):
-        self.poke_arr = array('i',(i for i in range(0,153))) # INIT array with index
+        self.poke_arr = self.SetPokemon()
         self.weights = self.SetWeights()
 
 
@@ -84,30 +108,37 @@ class TinyDbInterface:
 
 
     # Add pokemon to user (pokemon and quantity)
-    def AddPokemon(username, pokemon):
+    def AddPokemon(self, username, pokemon):
+        
         db = TinyDB('users.json')
-        user = db.search(User.username == username)
-        my_pokemon = user[0]['pokemon']
-        my_pokemon_new = IncrementPokeArr(username, my_pokemon)
-
+        Username = Query()
+        user = db.search(Username.username == username)
+        # print(pokemon)
+        my_pokemon_cur = user[0]['pokemon'][pokemon]
+        # print(my_pokemon_cur)
+        my_pokemon_new = self.IncrementPokeArr(user[0]['pokemon'], pokemon)
+        # print (my_pokemon_new)
         db.update({'pokemon': my_pokemon_new}, Username.username == username)
 
         pass # RETURN: check bool
 
     # Remove pokemon from user
-    def RemovePokemon(username, pokemon):
+    def RemovePokemon(self, username, pokemon):
         db = TinyDB('users.json')
-        user = db.search(User.username == username)
-        my_pokemon = user[0]['pokemon']
-        my_pokemon_new = DecrementPokeArr(username, my_pokemon)
-
+        Username = Query()
+        user = db.search(Username.username == username)
+        # print(pokemon)
+        my_pokemon_cur = user[0]['pokemon'][pokemon]
+        # print(my_pokemon_cur)
+        my_pokemon_new = self.DecrementPokeArr(user[0]['pokemon'], pokemon)
+        # print (my_pokemon_new)
         db.update({'pokemon': my_pokemon_new}, Username.username == username)
 
         pass # RETURN: check bool
 
 
     # Trade pokemon
-    def TradePokemon(user1, user2, pokemon1, pokemon2):
+    def TradePokemon(self, user1, user2, pokemon1, pokemon2):
         # Add [p1]
         AddPokemon(user1, pokemon1)
 
@@ -124,10 +155,10 @@ class TinyDbInterface:
 
 
     # Check pokemon quantity for one user TEST L8R
-    def GetUserPokemon(username):
-        data = json.loads(open('PokemonData.json').read())
-        json = {}
-
+    def GetUserPokemon(self, username):
+        data = json.load(open('PokemonData.json'), object_pairs_hook=OrderedDict)
+        json = []
+        User = Query()
         user = db.search(User.username == username)
         poke_list = user[0]['pokemon']
         
@@ -142,16 +173,14 @@ class TinyDbInterface:
 
 
     # Pick pokemon by "weighted random"
-    def SpawnPokemon():
-        rand_pokemon = np.random.choice(poke_arr, 1, weights) # I believe it changes on each call (check on this future brittany)
+    def SpawnPokemon(self):
+        
+        rand_pokemon = np.random.choice(self.poke_arr, 1, self.weights) # I believe it changes on each call (check on this future brittany)
 
         # RETURN: Name of pokemon spawned (based on number generated by "random")
         return rand_pokemon[0] # Get the first element of the array returned
 
 
-
-  
-        
 
 
 

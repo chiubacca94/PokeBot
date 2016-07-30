@@ -1,5 +1,5 @@
 {
-   "1": {
+   "001": {
       "name": "Bulbasaur",
       "attack": 49,
       "defense": 49,
@@ -18,7 +18,7 @@
       "probability": 3,
       "rarity": 2
    },
-   "2": {
+   "002": {
       "name": "Ivysaur",
       "attack": 62,
       "defense": 63,
@@ -33,7 +33,7 @@
       "curve": 1.3,
       "rarity": 6
    },
-   "3": {
+   "003": {
       "name": "Venusaur",
       "attack": 82,
       "defense": 83,
@@ -46,7 +46,7 @@
       "curve": 1.3,
       "rarity": 7
    },
-   "4": {
+   "004": {
       "name": "Charmander",
       "attack": 52,
       "defense": 43,
@@ -66,7 +66,7 @@
       "probability": 3,
       "rarity": 2
    },
-   "5": {
+   "005": {
       "name": "Charmeleon",
       "attack": 64,
       "defense": 58,
@@ -82,7 +82,7 @@
       "curve": 1.3,
       "rarity": 6
    },
-   "6": {
+   "006": {
       "name": "Charizard",
       "attack": 84,
       "defense": 78,
@@ -96,7 +96,7 @@
       "curve": 1.3,
       "rarity": 7
    },
-   "7": {
+   "007": {
       "name": "Squirtle",
       "attack": 48,
       "defense": 65,
@@ -116,7 +116,7 @@
       "probability": 3,
       "rarity": 2
    },
-   "8": {
+   "008": {
       "name": "Wartortle",
       "attack": 63,
       "defense": 80,
@@ -132,7 +132,7 @@
       "curve": 1.3,
       "rarity": 6
    },
-   "9": {
+   "009": {
       "name": "Blastoise",
       "attack": 83,
       "defense": 100,
@@ -146,7 +146,7 @@
       "curve": 1.3,
       "rarity": 7
    },
-   "10": {
+   "010": {
       "name": "Caterpie",
       "attack": 30,
       "defense": 35,
@@ -164,7 +164,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "11":{
+   "011":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -174,7 +174,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "12": {
+   "012": {
       "name": "Butterfree",
       "attack": 45,
       "defense": 50,
@@ -188,7 +188,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "13": {
+   "013": {
       "name": "Weedle",
       "attack": 35,
       "defense": 30,
@@ -206,7 +206,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "14": {
+   "014": {
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -216,7 +216,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "15": {
+   "015": {
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -226,7 +226,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "16": {
+   "016": {
       "name": "Pidgey",
       "attack": 45,
       "defense": 40,
@@ -245,7 +245,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "17": {
+   "017": {
       "name": "Pidgeotto",
       "attack": 60,
       "defense": 55,
@@ -260,7 +260,7 @@
       "curve": 1.3,
       "rarity": 2
    },
-   "18": {
+   "018": {
       "name": "Pidgeot",
       "attack": 80,
       "defense": 75,
@@ -273,7 +273,7 @@
       "curve": 1.3,
       "rarity": 4
    },
-   "19": {
+   "019": {
       "name": "Rattata",
       "attack": 56,
       "defense": 35,
@@ -292,7 +292,7 @@
       "probability": 20,
       "rarity": 1
    },
-   "20": {
+   "020": {
       "name": "Raticate",
       "attack": 81,
       "defense": 60,
@@ -304,7 +304,7 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "21": {
+   "021": {
       "name": "Spearow",
       "attack": 60,
       "defense": 30,
@@ -322,7 +322,7 @@
       "probability": 10,
       "rarity": 2
    },
-   "22": {
+   "022": {
       "name": "Fearow",
       "attack": 90,
       "defense": 65,
@@ -334,7 +334,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "23": {
+   "023": {
       "name": "Ekans",
       "attack": 60,
       "defense": 44,
@@ -353,7 +353,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "24": {
+   "024": {
       "name": "Arbok",
       "attack": 85,
       "defense": 69,
@@ -366,8 +366,17 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "25": {},
-   "26": {
+   "025": {
+      "name": "none",
+      "attack": 0,
+      "defense": 0,
+      "type": "none",
+      "moves": [
+      ],
+      "curve": 0,
+      "rarity": 0
+   },
+   "026": {
       "name": "Raichu",
       "attack": 90,
       "defense": 55,
@@ -379,7 +388,7 @@
       "curve": 1.6,
       "rarity": 5
    },
-   "27": {
+   "027": {
       "name": "Sandshrew",
       "attack": 75,
       "defense": 85,
@@ -398,7 +407,7 @@
       "probability": 10,
       "rarity": 1
    },
-   "28": {
+   "028": {
       "name": "Sandslash",
       "attack": 100,
       "defense": 110,
@@ -412,7 +421,7 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "29": {
+   "029": {
       "name": "Nidoran",
       "attack": 47,
       "defense": 52,
@@ -430,7 +439,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "30":{
+   "030":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -440,7 +449,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "31": {
+   "031": {
       "name": "Nidoqueen",
       "attack": 82,
       "defense": 87,
@@ -454,7 +463,7 @@
       "curve": 1.3,
       "rarity": 5
    },
-   "32": {
+   "032": {
       "name": "Nidoran",
       "attack": 57,
       "defense": 40,
@@ -472,7 +481,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "33":{
+   "033":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -482,7 +491,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "34": {
+   "034": {
       "name": "Nidoking",
       "attack": 92,
       "defense": 77,
@@ -495,7 +504,7 @@
       "curve": 1.3,
       "rarity": 5
    },
-   "35":{
+   "035":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -505,7 +514,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "36":{
+   "036":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -515,7 +524,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "37":{
+   "037":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -525,7 +534,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "38": {
+   "038": {
       "name": "Ninetales",
       "attack": 76,
       "defense": 75,
@@ -536,7 +545,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "39":{
+   "039":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -546,7 +555,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "40":{
+   "040":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -556,7 +565,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "41": {
+   "041": {
       "name": "Zubat",
       "attack": 45,
       "defense": 35,
@@ -576,7 +585,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "42": {
+   "042": {
       "name": "Golbat",
       "attack": 80,
       "defense": 70,
@@ -590,7 +599,7 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "43":{
+   "043":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -600,7 +609,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "44":{
+   "044":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -610,7 +619,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "45":{
+   "045":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -620,7 +629,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "46": {
+   "046": {
       "name": "Paras",
       "attack": 70,
       "defense": 55,
@@ -638,7 +647,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "47": {
+   "047": {
       "name": "Parasect",
       "attack": 95,
       "defense": 80,
@@ -650,7 +659,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "48": {
+   "048": {
       "name": "Venonat",
       "attack": 55,
       "defense": 50,
@@ -669,7 +678,7 @@
       "probability": 8,
       "rarity": 1
    },
-   "49": {
+   "049": {
       "name": "Venomoth",
       "attack": 65,
       "defense": 60,
@@ -683,7 +692,7 @@
       "curve": 1.6,
       "rarity": 5
    },
-   "50": {
+   "050": {
       "name": "Diglett",
       "attack": 55,
       "defense": 25,
@@ -701,7 +710,7 @@
       "probability": 15,
       "rarity": 2
    },
-   "51": {
+   "051": {
       "name": "Dugtrio",
       "attack": 80,
       "defense": 50,
@@ -714,7 +723,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "52": {
+   "052": {
       "name": "Meowth",
       "attack": 45,
       "defense": 35,
@@ -733,7 +742,7 @@
       "probability": 10,
       "rarity": 1
    },
-   "53": {
+   "053": {
       "name": "Persian",
       "attack": 70,
       "defense": 60,
@@ -746,7 +755,7 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "54": {
+   "054": {
       "name": "Psyduck",
       "attack": 52,
       "defense": 48,
@@ -765,7 +774,7 @@
       "probability": 15,
       "rarity": 2
    },
-   "55": {
+   "055": {
       "name": "Golduck",
       "attack": 82,
       "defense": 78,
@@ -778,7 +787,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "56": {
+   "056": {
       "name": "Mankey",
       "attack": 80,
       "defense": 35,
@@ -798,7 +807,7 @@
       "probability": 8,
       "rarity": 1
    },
-   "57": {
+   "057": {
       "name": "Primeape",
       "attack": 105,
       "defense": 60,
@@ -812,7 +821,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "58":{
+   "058":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -822,7 +831,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "59": {
+   "059": {
       "name": "Arcanine",
       "attack": 110,
       "defense": 80,
@@ -834,7 +843,7 @@
       "curve": 1,
       "rarity": 4
    },
-   "60": {
+   "060": {
       "name": "Poliwag",
       "attack": 50,
       "defense": 40,
@@ -853,7 +862,7 @@
       "probability": 6,
       "rarity": 1
    },
-   "61":{
+   "061":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -863,7 +872,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "62": {
+   "062": {
       "name": "Poliwrath",
       "attack": 85,
       "defense": 95,
@@ -874,7 +883,7 @@
       "curve": 1.3,
       "rarity": 5
    },
-   "63":{
+   "063":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -884,7 +893,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "64":{
+   "064":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -894,7 +903,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "65": {
+   "065": {
       "name": "Alakazam",
       "attack": 50,
       "defense": 45,
@@ -907,7 +916,7 @@
       "curve": 1.3,
       "rarity": 5
    },
-   "66": {
+   "066": {
       "name": "Machop",
       "attack": 80,
       "defense": 50,
@@ -926,7 +935,7 @@
       "probability": 12,
       "rarity": 1
    },
-   "67":{
+   "067":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -936,7 +945,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "68": {
+   "068": {
       "name": "Machamp",
       "attack": 130,
       "defense": 80,
@@ -950,7 +959,7 @@
       "curve": 1.3,
       "rarity": 3
    },
-   "69": {
+   "069": {
       "name": "Bellsprout",
       "attack": 75,
       "defense": 35,
@@ -968,7 +977,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "70":{
+   "070":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -978,7 +987,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "71": {
+   "071": {
       "name": "Victreebel",
       "attack": 105,
       "defense": 65,
@@ -990,7 +999,7 @@
       "curve": 1.3,
       "rarity": 5
    },
-   "72": {
+   "072": {
       "name": "Tentacool",
       "attack": 40,
       "defense": 35,
@@ -1011,7 +1020,7 @@
       "probability": 10,
       "rarity": 2
    },
-   "73": {
+   "073": {
       "name": "Tentacruel",
       "attack": 70,
       "defense": 65,
@@ -1025,7 +1034,7 @@
       "curve": 1,
       "rarity": 3
    },
-   "74": {
+   "074": {
       "name": "Geodude",
       "attack": 80,
       "defense": 100,
@@ -1044,7 +1053,7 @@
       "probability": 15,
       "rarity": 1
    },
-   "75":{
+   "075":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -1054,7 +1063,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "76": {
+   "076": {
       "name": "Golem",
       "attack": 110,
       "defense": 130,
@@ -1067,7 +1076,7 @@
       "curve": 1.3,
       "rarity": 3
    },
-   "77": {
+   "077": {
       "name": "Ponyta",
       "attack": 85,
       "defense": 55,
@@ -1086,7 +1095,7 @@
       "probability": 6,
       "rarity": 2
    },
-   "78": {
+   "078": {
       "name": "Rapidash",
       "attack": 100,
       "defense": 70,
@@ -1099,7 +1108,7 @@
       "curve": 1.6,
       "rarity": 4
    },
-   "79": {
+   "079": {
       "name": "Slowpoke",
       "attack": 65,
       "defense": 65,
@@ -1120,7 +1129,7 @@
       "probability": 5,
       "rarity": 1
    },
-   "80": {
+   "080": {
       "name": "Slowbro",
       "attack": 75,
       "defense": 110,
@@ -1134,7 +1143,7 @@
       "curve": 1.6,
       "rarity": 4
    },
-   "81": {
+   "081": {
       "name": "Magnemite",
       "attack": 35,
       "defense": 70,
@@ -1154,7 +1163,7 @@
       "probability": 8,
       "rarity": 1
    },
-   "82": {
+   "082": {
       "name": "Magneton",
       "attack": 60,
       "defense": 95,
@@ -1168,7 +1177,7 @@
       "curve": 1.6,
       "rarity": 2
    },
-   "83": {
+   "083": {
       "name": "Farfetch'd",
       "attack": 65,
       "defense": 55,
@@ -1185,7 +1194,7 @@
       "probability": 8,
       "rarity": 4
    },
-   "84": {
+   "084": {
       "name": "Doduo",
       "attack": 85,
       "defense": 45,
@@ -1203,7 +1212,7 @@
       "probability": 8,
       "rarity": 2
    },
-   "85": {
+   "085": {
       "name": "Dodrio",
       "attack": 110,
       "defense": 70,
@@ -1215,7 +1224,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "86": {
+   "086": {
       "name": "Seel",
       "attack": 45,
       "defense": 55,
@@ -1235,7 +1244,7 @@
       "probability": 4,
       "rarity": 2
    },
-   "87": {
+   "087": {
       "name": "Dewgong",
       "attack": 70,
       "defense": 80,
@@ -1249,7 +1258,7 @@
       "curve": 1.6,
       "rarity": 5
    },
-   "88": {
+   "088": {
       "name": "Grimer",
       "attack": 80,
       "defense": 50,
@@ -1268,7 +1277,7 @@
       "probability": 10,
       "rarity": 2
    },
-   "89": {
+   "089": {
       "name": "Muk",
       "attack": 105,
       "defense": 75,
@@ -1281,8 +1290,17 @@
       "curve": 1.6,
       "rarity": 4
    },
-   "90":{},
-   "91": {
+   "090":{
+      "name": "none",
+      "attack": 0,
+      "defense": 0,
+      "type": "none",
+      "moves": [
+      ],
+      "curve": 0,
+      "rarity": 0
+   },
+   "091": {
       "name": "Cloyster",
       "attack": 95,
       "defense": 180,
@@ -1293,7 +1311,7 @@
       "curve": 1,
       "rarity": 3
    },
-   "92": {
+   "092": {
       "name": "Gastly",
       "attack": 35,
       "defense": 30,
@@ -1312,7 +1330,7 @@
       "probability": 10,
       "rarity": 1
    },
-   "93":{
+   "093":{
       "name": "none",
       "attack": 0,
       "defense": 0,
@@ -1322,7 +1340,7 @@
       "curve": 0,
       "rarity": 0
    },
-   "94": {
+   "094": {
       "name": "Gengar",
       "attack": 65,
       "defense": 60,
@@ -1336,7 +1354,7 @@
       "curve": 1.3,
       "rarity": 5
    },
-   "95": {
+   "095": {
       "name": "Onix",
       "attack": 45,
       "defense": 160,
@@ -1355,7 +1373,7 @@
       "probability": 8,
       "rarity": 4
    },
-   "96": {
+   "096": {
       "name": "Drowzee",
       "attack": 48,
       "defense": 45,
@@ -1375,7 +1393,7 @@
       "probability": 8,
       "rarity": 2
    },
-   "97": {
+   "097": {
       "name": "Hypno",
       "attack": 73,
       "defense": 70,
@@ -1389,7 +1407,7 @@
       "curve": 1.6,
       "rarity": 3
    },
-   "98": {
+   "098": {
       "name": "Krabby",
       "attack": 105,
       "defense": 90,
@@ -1410,7 +1428,7 @@
       "probability": 6,
       "rarity": 1
    },
-   "99": {
+   "099": {
       "name": "Kingler",
       "attack": 130,
       "defense": 115,
