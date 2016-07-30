@@ -156,20 +156,25 @@ class TinyDbInterface:
 
     # Check pokemon quantity for one user TEST L8R
     def GetUserPokemon(self, username):
+        db = TinyDB('users.json')
         data = json.load(open('PokemonData.json'), object_pairs_hook=OrderedDict)
-        json = []
+        pokedex = ""
         User = Query()
         user = db.search(User.username == username)
+        print(user)
         poke_list = user[0]['pokemon']
-        
-        for i in 152:
+        print(poke_list)
+
+        for i in range(len(poke_list)):
             if poke_list[i] != 0:
-                poke_name = data[i]['name']
+                poke_name = self.Index2Name(str(i))
+                print(poke_name)
                 count = poke_list[i]
-                json.append( dict( poke_name = count ) )
+                print(count)
+                pokedex = pokedex +  poke_name + " : " + str(poke_list[i]) + "\r\n" 
 
         # RETURN: list of pokemon and quantity List: [1] = 2 (You have 2 bulbasaurs)
-        return json
+        return pokedex
 
 
     # Pick pokemon by "weighted random"

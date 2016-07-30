@@ -90,11 +90,12 @@ def send_catch_action(message):
 # Message handler for when a user will /check all pokemon
 @bot.message_handler(commands=['pokedex'])
 def send_pokedex_action(message):
+    pokedex = ''
     db = TinyDbInterface()
-    db.GetUserPokemon('message.from_user.username')
+    pokedex = db.GetUserPokemon(message.from_user.username)
     # If empty or not registered???
     
-    bot.reply_to(message, message.from_user.username + " caught a " + curPokemon)
+    bot.reply_to(message, pokedex)
 
 
 
