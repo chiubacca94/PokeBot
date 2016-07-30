@@ -39,7 +39,7 @@ class TinyDbInterface:
             if arr[i] == 5:
                 converted.append(0.05)
             if arr[i] == 6:
-                converted[i].append(0.02)
+                converted.append(0.02)
             if arr[i] == 7:
                 converted.append(0.02)
             if arr[i] == 8:
