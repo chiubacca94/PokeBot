@@ -100,8 +100,8 @@ def send_pokedex_action(message):
 
 
 # Message handler for random pokemon spawning
-# @bot.message_handler(func=lambda m: (random.random() < f)) # Return less than not equal to 1 #yaySTAT
-@bot.message_handler(commands=['spawn'])
+@bot.message_handler(func=lambda m: (random.random() < f)) # Return less than not equal to 1 #yaySTAT
+# @bot.message_handler(commands=['spawn'])
 def appear(message):
     db = TinyDbInterface()
     global curPokemon
@@ -122,8 +122,8 @@ def appear(message):
 
     print(curPokemon)
     print(curPokemonNum)
-    bot.reply_to(message, curPokemon + " has appeared!")
-    # bot.send_message(message.chat.id, curPokemon + " has appeared!")
+    # bot.reply_to(message, curPokemon + " has appeared!")
+    bot.send_message(message.chat.id, curPokemon + " has appeared!")
 
 
 # Bot waits for events
