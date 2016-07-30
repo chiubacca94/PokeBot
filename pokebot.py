@@ -29,7 +29,8 @@ f = 0.15
 def join_action(message):
     db = TinyDbInterface()
     db.AddUser(message.from_user.username)
-    bot.reply_to(message, "Welcome to the World of Pokemon" + message.from_user.username)
+    print(message.from_user.username)
+    bot.reply_to(message, "Welcome to the World of Pokemon " + message.from_user.username)
 
 # Message handler for /start and /help
 @bot.message_handler(commands=['help'])

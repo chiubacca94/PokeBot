@@ -25,25 +25,25 @@ class TinyDbInterface:
         
     # Convert the 'rarity' number to a probability value (0<i<1) so we can use scientific library 
     #   to pick a weighted random number/pokemon
-    def ConvertToProb(arr):
+    def ConvertToProb(self, arr):
         converted = []
         for i in arr:
             if arr[i] == 1:
-                converted[i] = 0.40
+                converted.append(0.40)
             if arr[i] == 2:
-                converted[i] = 0.20
+                converted.append(0.20)
             if arr[i] == 3:
-                converted[i] = 0.15
+                converted.append(0.15)
             if arr[i] == 4:
-                converted[i] = 0.10
+                converted.append(0.10)
             if arr[i] == 5:
-                converted[i] = 0.05
+                converted.append(0.05)
             if arr[i] == 6:
-                converted[i] = 0.02
+                converted[i].append(0.02)
             if arr[i] == 7:
-                converted[i] = 0.02
+                converted.append(0.02)
             if arr[i] == 8:
-                converted[i] = 0.01
+                converted.append(0.01)
 
         return converted
 
@@ -51,17 +51,15 @@ class TinyDbInterface:
     def SetWeights(self):
         rarr = []
         prob = []
-
+ 
         data = json.loads(open('PokemonData.json').read())
 
-        for i in range(153):
-            if data['1']['rarity'] == 0:
-                rarr[i] = 0;
-            else:
-                rarr[i] = data[i]['rarity']
-                
+        for key, value in data.items():
+            if 'rarity' in value:
+                rarr.append(value['rarity'])
+ 
 
-        prob = ConvertToProb(arr)
+        prob = self.ConvertToProb(rarr)
 
         return prob
 
@@ -76,7 +74,7 @@ class TinyDbInterface:
 
 
     # Add user (each user is an array of 150)
-    def AddUser(username):
+    def AddUser(self, username):
         my_pokemon = [0] * 153 # Matching arr index to pokemon index (0 is disregarded)
 
         db = TinyDB('users.json')
@@ -109,18 +107,18 @@ class TinyDbInterface:
 
 
     # Trade pokemon
-    def TradePokemon(user1, user2, pokemon):
+    def TradePokemon(user1, user2, pokemon1, pokemon2):
         # Add [p1]
-        AddPokemon(user1, pokemon)
+        AddPokemon(user1, pokemon1)
 
         # Remove
-        RemovePokemon(user2, pokemon)
+        RemovePokemon(user2, pokemon1)
 
         # Add [p2]
-        AddPokemon(user2, pokemon)
+        AddPokemon(user2, pokemon2)
         
         # Remove
-        RemovePokemon(user1, pokemon)
+        RemovePokemon(user1, pokemon2)
 
         pass # RETURN: check bool
 

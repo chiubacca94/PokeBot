@@ -776,7 +776,7 @@
          "hydro pump"
       ],
       "curve": 1.6,
-      "rarity": 100
+      "rarity": 3
    },
    "56": {
       "name": "Mankey",
@@ -1247,7 +1247,7 @@
          "aurora beam"
       ],
       "curve": 1.6,
-      "rarity": 100
+      "rarity": 5
    },
    "88": {
       "name": "Grimer",
@@ -2138,7 +2138,7 @@
          50
       ],
       "probability": 1,
-      "rarity": 100
+      "rarity": 8
    },
    "145": {
       "name": "Zapdos",
