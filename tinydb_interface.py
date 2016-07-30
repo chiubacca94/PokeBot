@@ -166,6 +166,7 @@ class TinyDbInterface:
         poke_list = user[0]['pokemon']
         print(poke_list)
 
+        # Text constructor
         for i in range(len(poke_list)):
             if poke_list[i] != 0:
                 caught += 1
@@ -178,7 +179,11 @@ class TinyDbInterface:
         # RETURN:
         #   Count of unique pokemon
         #   list of pokemon and quantity List: [1] = 2 (You have 2 bulbasaurs)
-        return "Unique Pokemon caught: {}\r\n".format(caught) + pokedex
+        #return "Unique Pokemon caught: {}\r\n".format(caught) + pokedex
+
+        # Intermediate step for transitioning to photo dex:
+        # Simply return string of unique captures
+        return "Caught: {}".format(caught)
 
 
     # Pick pokemon by "weighted random"
