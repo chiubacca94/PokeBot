@@ -159,6 +159,7 @@ class TinyDbInterface:
         db = TinyDB('users.json')
         # data = json.load(open('PokemonData.json'), object_pairs_hook=OrderedDict)
         pokedex = ""
+        caught = 0      # How many unique pokemon has the user obtained
         User = Query()
         user = db.search(User.username == username)
         print(user)
@@ -167,14 +168,17 @@ class TinyDbInterface:
 
         for i in range(len(poke_list)):
             if poke_list[i] != 0:
+                caught += 1
                 poke_name = self.Index2Name(str(i))
                 print(poke_name)
                 count = poke_list[i]
                 print(count)
                 pokedex = pokedex +  poke_name + " : " + str(poke_list[i]) + "\r\n" 
 
-        # RETURN: list of pokemon and quantity List: [1] = 2 (You have 2 bulbasaurs)
-        return pokedex
+        # RETURN:
+        #   Count of unique pokemon
+        #   list of pokemon and quantity List: [1] = 2 (You have 2 bulbasaurs)
+        return "Unique Pokemon caught: {}\r\n".format(caught) + pokedex
 
 
     # Pick pokemon by "weighted random"
