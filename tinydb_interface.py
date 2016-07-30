@@ -6,6 +6,8 @@ import json
 from array import array
 from collections import OrderedDict
 
+# own file for pprinting pokedex
+import utility
 
 class TinyDbInterface:
     # Static variables
@@ -166,6 +168,7 @@ class TinyDbInterface:
         poke_list = user[0]['pokemon']
         print(poke_list)
 
+        # Text constructor
         for i in range(len(poke_list)):
             if poke_list[i] != 0:
                 caught += 1
@@ -173,12 +176,18 @@ class TinyDbInterface:
                 print(poke_name)
                 count = poke_list[i]
                 print(count)
-                pokedex = pokedex +  poke_name + " : " + str(poke_list[i]) + "\r\n" 
+                pokedex = pokedex +  poke_name + " : " + str(poke_list[i]) + "\r\n"
+
+        utility.user_pokedex(poke_list)
 
         # RETURN:
         #   Count of unique pokemon
         #   list of pokemon and quantity List: [1] = 2 (You have 2 bulbasaurs)
-        return "Unique Pokemon caught: {}\r\n".format(caught) + pokedex
+        #return "Unique Pokemon caught: {}\r\n".format(caught) + pokedex
+
+        # Intermediate step for transitioning to photo dex:
+        # Simply return string of unique captures
+        return "Caught: {}".format(caught)
 
 
     # Pick pokemon by "weighted random"
