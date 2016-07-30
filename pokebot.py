@@ -21,14 +21,18 @@ TOKEN = config['telegram_bot_API']['API_TOKEN']
 # Declare bot
 bot = telebot.TeleBot(TOKEN)
 
-# current pokemon (not safe need alternative!!!! :((()
+# Allow communication between functions here idk...
 global curPokemon
 global curPokemonNum
+global active
+
+# init
 curPokemon = ''
 curPokemonNum = ''
+active = False
 
 # Frequency of a pokemon appearing
-f = 0.15
+f = 0.80
 
 # Message handler for /start and /help
 @bot.message_handler(commands=['help'])
@@ -41,16 +45,22 @@ def send_welcome(message):
 @bot.message_handler(commands=['join'])
 def join_action(message):
     db = TinyDbInterface()
+    
     # cannot join 2x!!!
-    db.AddUser(message.from_user.username)
-    print(message.from_user.username)
-    bot.reply_to(message, "Welcome to the World of Pokemon " + message.from_user.username)
+    if(db.CheckUserExists(message.from_user.username) == 0):
+        bot.reply_to(message, "You already joined!")
+    else:
+        db.AddUser(message.from_user.username)
+        print(message.from_user.username)
+        bot.reply_to(message, "Welcome to the World of Pokemon " + message.from_user.username)
 
 
 # Message handler for when a user will /catch a pokemon
 @bot.message_handler(commands=['catch'])
 def send_catch_action(message):
     db = TinyDbInterface()
+    global active
+
     print("Caught: " + curPokemon)
     print(curPokemonNum)
     
@@ -59,8 +69,12 @@ def send_catch_action(message):
         bot.reply_to(message, "Nothing is there :(")
     else:
         if(db.CheckUserExists(message.from_user.username) == 0):
-            db.AddPokemon(message.from_user.username, int(curPokemonNum))
-            bot.reply_to(message, message.from_user.username + " caught a " + curPokemon)
+            if(active==True):
+                db.AddPokemon(message.from_user.username, int(curPokemonNum))
+                active = False
+                bot.reply_to(message, message.from_user.username + " caught a " + curPokemon)
+            else: 
+                bot.reply_to(message, "Nothing is there.") 
         else:
             bot.reply_to(message, "Who are you?")
    
@@ -86,12 +100,13 @@ def send_pokedex_action(message):
 
 
 # Message handler for random pokemon spawning
-@bot.message_handler(func=lambda m: (random.random() < f)) # Return less than not equal to 1 #yaySTAT
-# @bot.message_handler(commands=['spawn'])
+# @bot.message_handler(func=lambda m: (random.random() < f)) # Return less than not equal to 1 #yaySTAT
+@bot.message_handler(commands=['spawn'])
 def appear(message):
     db = TinyDbInterface()
     global curPokemon
     global curPokemonNum
+    global active
     
     while True:
         pokemon = db.SpawnPokemon()
@@ -100,17 +115,15 @@ def appear(message):
         pokemon = str(pokemon)
         pokemon_name = db.Index2Name(pokemon)
         curPokemon = pokemon_name
+        active = True
 
         if curPokemon != 'none':
                 break
 
     print(curPokemon)
     print(curPokemonNum)
-    # bot.reply_to(message, curPokemon + " has appeared!")
-    bot.send_message(message.chat.id, curPokemon + " has appeared!")
-
-
-
+    bot.reply_to(message, curPokemon + " has appeared!")
+    # bot.send_message(message.chat.id, curPokemon + " has appeared!")
 
 
 # Bot waits for events
