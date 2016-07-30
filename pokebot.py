@@ -75,8 +75,10 @@ def send_pokedex_action(message):
     
     if(db.CheckUserExists(message.from_user.username) == 0):
         pokedex = db.GetUserPokemon(message.from_user.username)
-        bot.reply_to(message, pokedex)
-            # bot.reply_to(message, message.from_user.username + " caught a " + curPokemon)
+        if(pokedex != ""):
+            bot.reply_to(message, pokedex)
+        else:
+            bot.reply_to(message, "You have no pokemon.")
     else:
         bot.reply_to(message, "Who are you?")
 
