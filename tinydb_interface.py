@@ -187,7 +187,10 @@ class TinyDbInterface:
 
         # Intermediate step for transitioning to photo dex:
         # Simply return string of unique captures
-        return "Caught: {}".format(caught)
+        # WARNING - if pokemon are released, they will also be removed from pokedex
+        # SOLUTION? - add field to db saying whether they have been caught or not, and iterate over that
+        ret = "Caught: {}".format(caught) if (caught > 0) else ""
+        return ret
 
 
     # Pick pokemon by "weighted random"
