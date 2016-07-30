@@ -1,0 +1,6 @@
+numpy==1.11.1
+Pillow==3.3.0
+pyTelegramBotAPI==2.1.5
+requests==2.10.0
+six==1.10.0
+tinydb==3.2.1
