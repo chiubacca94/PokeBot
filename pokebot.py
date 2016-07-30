@@ -28,7 +28,7 @@ curPokemon = ''
 curPokemonNum = ''
 
 # Frequency of a pokemon appearing
-f = 0.90
+f = 0.15
 
 # Message handler for /start and /help
 @bot.message_handler(commands=['help'])
@@ -47,9 +47,45 @@ def join_action(message):
     bot.reply_to(message, "Welcome to the World of Pokemon " + message.from_user.username)
 
 
+# Message handler for when a user will /catch a pokemon
+@bot.message_handler(commands=['catch'])
+def send_catch_action(message):
+    db = TinyDbInterface()
+    print("Caught: " + curPokemon)
+    print(curPokemonNum)
+    
+    if curPokemonNum == '':
+        print("No pokemon to catch :(")
+        bot.reply_to(message, "Nothing is there :(")
+    else:
+        if(db.CheckUserExists(message.from_user.username) == 0):
+            db.AddPokemon(message.from_user.username, int(curPokemonNum))
+            bot.reply_to(message, message.from_user.username + " caught a " + curPokemon)
+        else:
+            bot.reply_to(message, "Who are you?")
+   
+    pass
+
+
+# Message handler for when a user will /check all pokemon
+@bot.message_handler(commands=['pokedex'])
+def send_pokedex_action(message):
+    pokedex = ''
+    db = TinyDbInterface()
+    
+    if(db.CheckUserExists(message.from_user.username) == 0):
+        pokedex = db.GetUserPokemon(message.from_user.username)
+        bot.reply_to(message, pokedex)
+            # bot.reply_to(message, message.from_user.username + " caught a " + curPokemon)
+    else:
+        bot.reply_to(message, "Who are you?")
+
+    pass
+
+
 # Message handler for random pokemon spawning
-# @bot.message_handler(func=lambda m: (random.random() < freq)) # Return less than not equal to 1 #yaySTAT
-@bot.message_handler(commands=['spawn'])
+@bot.message_handler(func=lambda m: (random.random() < f)) # Return less than not equal to 1 #yaySTAT
+# @bot.message_handler(commands=['spawn'])
 def appear(message):
     db = TinyDbInterface()
     global curPokemon
@@ -68,34 +104,10 @@ def appear(message):
 
     print(curPokemon)
     print(curPokemonNum)
-    bot.reply_to(message, curPokemon + " has appeared!")
-    #bot.send_message(message, "A wild " + pokemon_name + " has appeared!")
+    # bot.reply_to(message, curPokemon + " has appeared!")
+    bot.send_message(message.chat.id, curPokemon + " has appeared!")
 
 
-# Message handler for when a user will /catch a pokemon
-@bot.message_handler(commands=['catch'])
-def send_catch_action(message):
-    db = TinyDbInterface()
-    print("Caught: " + curPokemon)
-    print(curPokemonNum)
-    if curPokemonNum == '':
-        print("No pokemon to catch :(")
-    else:
-        db.AddPokemon(message.from_user.username, int(curPokemonNum))
-    # If empty or not registered???
-    
-    bot.reply_to(message, message.from_user.username + " caught a " + curPokemon)
-
-
-# Message handler for when a user will /check all pokemon
-@bot.message_handler(commands=['pokedex'])
-def send_pokedex_action(message):
-    pokedex = ''
-    db = TinyDbInterface()
-    pokedex = db.GetUserPokemon(message.from_user.username)
-    # If empty or not registered???
-    
-    bot.reply_to(message, pokedex)
 
 
 
