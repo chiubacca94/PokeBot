@@ -187,7 +187,8 @@ class TinyDbInterface:
 
         # Intermediate step for transitioning to photo dex:
         # Simply return string of unique captures
-        return "Caught: {}".format(caught)
+        # return "Caught: {}".format(caught)
+        return pokedex
 
 
     # Pick pokemon by "weighted random"

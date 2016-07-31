@@ -2,9 +2,10 @@
 # Pokebot will randomly have pokemon appear in chats.
 #   Only 151 are here
 # ** MUST HAVE pyTelegramBotAPI : [pip install pyTelegramBotAPI] or upgrade [pip install pytelegrambotapi --upgrade]
-# ** MUST HAVE tinydb : [pip install tinydb] and numpy : [pip install numpy]
+# ** MUST HAVE tinydb : [pip install tinydb] and numpy : [pip install numpy] and PIL
 # How to run: python3 pokebot.py 
 # recommend: using a virtual environment
+
 # =====================================================================================================================================================
 
 # Import libs
@@ -116,8 +117,8 @@ def send_pokedex_action(message):
         pokedex = db.GetUserPokemon(username, chatid)
         if(pokedex != ""):
             bot.reply_to(message, pokedex)
-            bot.sendChatAction(message['chat']['id'], 'upload_photo')
-            bot.sendPhoto(message['chat']['id'], open('user_dex.png', 'rb'), caption(pokedex))
+            bot.send_chat_action(message.chat.id, 'upload_photo')
+            bot.send_photo(chatid, open('user_dex.png', 'rb')) #, caption(pokedex))
         else:
             bot.reply_to(message, "You have no pokemon.")
     else:
