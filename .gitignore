@@ -4,3 +4,4 @@ pokebot.cfg
 users.json
 *.pyc
 __pycache__/*
+user_dex.png
