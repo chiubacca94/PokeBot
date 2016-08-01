@@ -27,10 +27,11 @@ def user_pokedex(dex_obj):
     for i in range(0, min(len(dex_obj), 150)):
         if dex_obj[i] > 0:
             # Also return number obtained
-            draw = ImageDraw.Draw(images[i])
+            draw = ImageDraw.Draw(images[i-1])
             draw.text((1, 20), str(dex_obj[i]), fill=(0,0,0,255))
             # Then paste the image onto the pokedex background
-            background.paste(images[i], (x, y))
+            background.paste(images[i-1], (x, y))
+        # when to /r/n
         if i%5 != 4:
             x = x+30+2
         else:

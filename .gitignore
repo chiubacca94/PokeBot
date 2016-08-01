@@ -2,3 +2,5 @@ PokemonRarityGuide.jpg
 __pycache__
 pokebot.cfg
 users.json
+*.pyc
+__pycache__/*

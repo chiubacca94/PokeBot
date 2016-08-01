@@ -29,6 +29,8 @@ class TinyDbInterface:
 
     # Increment the pokemon count in an array
     def IncrementPokeArr(self, arr, pokemonIndex):
+        if(pokemonIndex == 0):
+            pokemonIndex=+1
         pokemonIndex = int(pokemonIndex)
         # print(arr)
         arr[pokemonIndex] = arr[pokemonIndex] + 1
@@ -36,6 +38,9 @@ class TinyDbInterface:
 
     # Decrement the pokemon count in an array
     def DecrementPokeArr(self, arr, pokemonCt, index):
+        if(pokemonIndex == 0):
+            pokemonIndex=+1
+
         pokemonIndex = int(pokemonIndex)
         # print(arr)
         arr[pokemonIndex] = arr[pokemonIndex] - 1
@@ -89,7 +94,7 @@ class TinyDbInterface:
     # Set pokemon arr to index integers
     def SetPokemon(self):
         arr = []
-        arr = array('i',(i for i in range(0,153))) # INIT array with index
+        arr = array('i',(i for i in range(0,152))) # INIT array with index
 
         return arr
 
@@ -101,7 +106,7 @@ class TinyDbInterface:
 
     # Add user (each user is an array of 150)
     def AddUser(self, username, chatid):
-        my_pokemon = [0] * 153 # Matching arr index to pokemon index (0 is disregarded)
+        my_pokemon = [0] * 151 # Matching arr index to pokemon index (0 is disregarded)
 
         db = TinyDB('users.json')
         db.insert({'username': username, 'chatid': chatid, 'pokemon': my_pokemon})
@@ -192,7 +197,7 @@ class TinyDbInterface:
      
         # WARNING - if pokemon are released, they will also be removed from pokedex
         # SOLUTION? - add field to db saying whether they have been caught or not, and iterate over that
-        ret = "Caught: {}".format(caught) if (caught > 0) else ""
+        ret = ("Caught: {} \n" + pokedex).format(caught) if (caught > 0) else ""
         return ret
 
 
