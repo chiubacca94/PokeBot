@@ -117,7 +117,7 @@ def send_pokedex_action(message):
         if(pokedex != ""):
             bot.reply_to(message, pokedex)
             bot.sendChatAction(message['chat']['id'], 'upload_photo')
-            bot.sendPhoto(message['chat']['id'], open('user_dex.png', 'rb'), caption(pokedex))
+            bot.sendPhoto(message['chat']['id'], open('user_dex.png', 'rb'), caption(pokedex), reply_to_message_id = message['message_id'])
         else:
             bot.reply_to(message, "You have no pokemon.")
     else:

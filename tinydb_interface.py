@@ -189,7 +189,9 @@ class TinyDbInterface:
         # Simply return string of unique captures
         # WARNING - if pokemon are released, they will also be removed from pokedex
         # SOLUTION? - add field to db saying whether they have been caught or not, and iterate over that
-        ret = "Caught: {}".format(caught) if (caught > 0) else ""
+        
+        #ret = "Caught: {}".format(caught) if (caught > 0) else ""
+        ret = "Caught: {}\r\n{}".format(caught, pokedex) if (caught > 0) else ""
         return ret
 
 
