@@ -197,14 +197,10 @@ class TinyDbInterface:
      
         # WARNING - if pokemon are released, they will also be removed from pokedex
         # SOLUTION? - add field to db saying whether they have been caught or not, and iterate over that
-<<<<<<< HEAD
-        ret = ("Caught: {} \n" + pokedex).format(caught) if (caught > 0) else ""
-=======
-        
+
         #ret = "Caught: {}".format(caught) if (caught > 0) else ""
         ret = "Caught: {}\r\n{}".format(caught, pokedex) if (caught > 0) else ""
->>>>>>> dec13cb0d4d281c78772df5cfd30f2f8d111c9cd
-        return ret
+
 
 
 
