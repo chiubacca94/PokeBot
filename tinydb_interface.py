@@ -201,6 +201,7 @@ class TinyDbInterface:
         #ret = "Caught: {}".format(caught) if (caught > 0) else ""
         ret = "Caught: {}\r\n{}".format(caught, pokedex) if (caught > 0) else ""
 
+        return ret
 
 
 
