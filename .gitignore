@@ -1,7 +1,8 @@
+*.pyc
+__pycache__/
+__pycache__/*
 PokemonRarityGuide.jpg
-__pycache__
 pokebot.cfg
 users.json
-*.pyc
-__pycache__/*
 user_dex.png
+users copy 2.json
