@@ -2252,7 +2252,7 @@
       "curve": 1,
       "rarity": 7
    },
-   "150": {
+   "151": {
       "name": "Mewtwo",
       "attack": 110,
       "defense": 90,
@@ -2270,7 +2270,7 @@
       "probability": 1,
       "rarity": 8
    },
-   "151": {
+   "150": {
       "name": "Mew",
       "attack": 100,
       "defense": 100,

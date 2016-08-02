@@ -839,4 +839,270 @@ Bulbasaur
 Caught: Bulbasaur
 1
 [{'username': 'chiubacca', 'chatid': -161862849, 'pokemon': [0, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}]
-[0, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+[0, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]2016-08-02 01:29:50,679 (__init__.py:211 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other long poll or webhook"}']"
+
+Bulbasaur
+2
+Ivysaur
+2
+Venusaur
+1
+Charmander
+1
+Charmeleon
+1
+Charizard
+1
+Squirtle
+1
+Wartortle
+1
+Blastoise
+1
+Caterpie
+1
+none
+1
+Butterfree
+1
+Weedle
+1
+none
+1
+none
+1
+Pidgey
+1
+Pidgeotto
+1
+Pidgeot
+1
+Rattata
+1
+Raticate
+1
+Golbat
+1
+Paras
+1
+Meowth
+1
+Mankey
+1
+Rapidash
+1
+Muk
+1
+Hypno
+1
+Kingler
+1
+Rhyhorn
+1
+Chansey
+1
+Electabuzz
+1
+Magmar
+1
+Pinsir
+1
+Tauros
+1
+Magikarp
+1
+Gyarados
+1
+Lapras
+1
+none
+1
+Eevee
+1
+none
+1
+Jolteon
+1
+Flareon
+1
+Porygon
+1
+Omanyte
+1
+Omastar
+1
+Kabuto
+1
+Kabutops
+1
+Aerodactyl
+1
+Snorlax
+1
+Articuno
+1
+Zapdos
+1
+Moltres
+1
+Dratini
+1
+Dragonair
+1
+Dragonite
+1
+Mewtwo
+1
+Mew
+1
+Jolteon
+135
+Caught: Jolteon
+135
+[{'username': 'chiubacca', 'chatid': -161862849, 'pokemon': [0, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}]
+[0, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Bulbasaur
+2
+Ivysaur
+2
+Venusaur
+1
+Charmander
+1
+Charmeleon
+1
+Charizard
+1
+Squirtle
+1
+Wartortle
+1
+Blastoise
+1
+Caterpie
+1
+none
+1
+Butterfree
+1
+Weedle
+1
+none
+1
+none
+1
+Pidgey
+1
+Pidgeotto
+1
+Pidgeot
+1
+Rattata
+1
+Raticate
+1
+Golbat
+1
+Paras
+1
+Meowth
+1
+Mankey
+1
+Rapidash
+1
+Muk
+1
+Hypno
+1
+Kingler
+1
+Rhyhorn
+1
+Chansey
+1
+Electabuzz
+1
+Magmar
+1
+Pinsir
+1
+Tauros
+1
+Magikarp
+1
+Gyarados
+1
+Lapras
+1
+none
+1
+Eevee
+1
+none
+1
+Jolteon
+2
+Flareon
+1
+Porygon
+1
+Omanyte
+1
+Omastar
+1
+Kabuto
+1
+Kabutops
+1
+Aerodactyl
+1
+Snorlax
+1
+Articuno
+1
+Zapdos
+1
+Moltres
+1
+Dratini
+1
+Dragonair
+1
+Dragonite
+1
+Mewtwo
+1
+Mew
+1
+Magmar
+126
+Caught: Magmar
+126
+2016-08-02 02:26:10,968 (__init__.py:211 MainThread) ERROR - TeleBot: "A request to the Telegram API was unsuccessful. The server returned HTTP 409 Conflict. Response body:
+[b'{"ok":false,"error_code":409,"description":"Conflict: terminated by other long poll or webhook"}']"
+Pokebot is running...
+Pokebot is running...
+[{'username': 'chiubacca', 'chatid': -161862849, 'pokemon': [0, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]}]
+[0, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Bulbasaur
+2
+Traceback (most recent call last):
+  File "pokebot.py", line 186, in <module>
+    bot.polling()
+  File "/usr/local/lib/python3.4/dist-packages/telebot/__init__.py", line 183, in polling
+    self.__threaded_polling(none_stop, interval, timeout)
+  File "/usr/local/lib/python3.4/dist-packages/telebot/__init__.py", line 207, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/usr/local/lib/python3.4/dist-packages/telebot/util.py", line 103, in raise_exceptions
+    six.reraise(self.exc_info[0], self.exc_info[1], self.exc_info[2])
+  File "/usr/local/lib/python3.4/dist-packages/six.py", line 686, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/telebot/util.py", line 54, in run
+    task(*args, **kwargs)
+  File "pokebot.py", line 117, in send_pokedex_action
+    pokedex = db.GetUserPokemon(username, chatid)
+  File "/home/pi/Documents/PokeBot/tinydb_interface.py", line 184, in GetUserPokemon
+    pokedex = i + " " +  pokedex +  poke_name + " : " + str(poke_list[i]) + "\r\n"
+TypeError: unsupported operand type(s) for +: 'int' and 'str'

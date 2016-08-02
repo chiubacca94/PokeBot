@@ -181,7 +181,7 @@ class TinyDbInterface:
                 print(poke_name)
                 count = poke_list[i]
                 print(count)
-                pokedex = pokedex +  poke_name + " : " + str(poke_list[i]) + "\r\n"
+                pokedex = pokedex + " " + str(i) + " " +  poke_name + " : " + str(poke_list[i]) + "\r\n"
 
         utility.user_pokedex(poke_list)
 
