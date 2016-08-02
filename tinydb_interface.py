@@ -106,7 +106,7 @@ class TinyDbInterface:
 
     # Add user (each user is an array of 150)
     def AddUser(self, username, chatid):
-        my_pokemon = [0] * 151 # Matching arr index to pokemon index (0 is disregarded)
+        my_pokemon = [0] * 152 # Matching arr index to pokemon index (0 is disregarded)
 
         db = TinyDB('users.json')
         db.insert({'username': username, 'chatid': chatid, 'pokemon': my_pokemon})
