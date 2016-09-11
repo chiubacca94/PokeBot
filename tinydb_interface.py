@@ -55,21 +55,21 @@ class TinyDbInterface:
             if arr[i] == 0:
                 converted.append(0)
             if arr[i] == 1:
-                converted.append(0.40)
+                converted.append(0.60)
             if arr[i] == 2:
                 converted.append(0.20)
             if arr[i] == 3:
-                converted.append(0.15)
-            if arr[i] == 4:
                 converted.append(0.10)
+            if arr[i] == 4:
+                converted.append(0.03)
             if arr[i] == 5:
-                converted.append(0.05)
+                converted.append(0.02)
             if arr[i] == 6:
-                converted.append(0.02)
+                converted.append(0.002)
             if arr[i] == 7:
-                converted.append(0.02)
+                converted.append(0.002)
             if arr[i] == 8:
-                converted.append(0.01)
+                converted.append(0.001)
 
         return converted
 
@@ -181,7 +181,8 @@ class TinyDbInterface:
                 print(poke_name)
                 count = poke_list[i]
                 print(count)
-                pokedex = pokedex + " "  +  poke_name + " : " + str(poke_list[i]) + "\r\n"
+                if(poke_name != 'none'):
+                    pokedex = pokedex + " "  +  poke_name + " : " + str(count) + "\r\n"
 
         utility.user_pokedex(poke_list)
 
